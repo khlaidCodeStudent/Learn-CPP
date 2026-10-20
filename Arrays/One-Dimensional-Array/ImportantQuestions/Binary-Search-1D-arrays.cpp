@@ -7,7 +7,7 @@ int BinarySearch(vector<int> arr, int tar)
   int end = arr.size() - 1;
   while (str <= end)
   {
-    int mid = (str + end) / 2;
+    int mid = str + (end - str) / 2;
     if (tar > arr[mid])
     {
       str = mid + 1;
