@@ -37,7 +37,7 @@ int main()
 }
 
 // Information:
- // output for Even array: 6
+// output for Even array: 6
 // Output for Odd array: 1
 // Time Complexity: O(log n)
 // Space Complexity: O(1)
