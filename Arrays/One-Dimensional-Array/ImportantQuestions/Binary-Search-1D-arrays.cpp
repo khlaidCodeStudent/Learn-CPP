@@ -25,13 +25,20 @@ int BinarySearch(vector<int> arr, int tar)
 }
 int main()
 {
-  vector<int> arr = {-1, 0, 3, 4, 5, 9, 12};
+
+  vector<int> arr = {-1, 0, 3, 4, 5, 9, 12}; // Even array
   int tar1 = 12;
+
   cout << BinarySearch(arr, tar1) << endl;
+
+  vector<int> arr2 = {-1, 0, 3, 5, 9, 12}; // Odd array
+  int tar2 = 0;
+  cout << BinarySearch(arr2, tar2) << endl;
 }
 
 // Information:
-// Output: 6
+ // output for Even array: 6
+// Output for Odd array: 1
 // Time Complexity: O(log n)
 // Space Complexity: O(1)
 // Note: The array must be sorted for binary search to work correctly.
