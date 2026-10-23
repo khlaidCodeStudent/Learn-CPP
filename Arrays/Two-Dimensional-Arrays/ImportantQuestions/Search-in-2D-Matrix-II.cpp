@@ -40,7 +40,7 @@ int main()
       {18, 21, 23, 26, 30}};
 
   Solution sol;
-  int target = 5; 
+  int target = 5;
 
   if (sol.searchMatrix(matrix, target))
   {
