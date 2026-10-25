@@ -54,7 +54,6 @@ getline(cin, fullName); // Reads "Khalid Khan" completely
 cout << "Hello, " << fullName;
 ```
 ## 5. Important String Functions in C++
-## 5. Important String Functions in C++
 
 | Function | Description | Example |
 | :--- | :--- | :--- |
