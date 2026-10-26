@@ -19,14 +19,12 @@ int main()
   {
     cout << str[i];
   }
-  return 0;
 
   // Now for C++ Strings
 
   string name = "Khalid khan";
   reverse(name.begin(), name.end());
   cout << name << endl;
-  return 0;
 }
 // Output: olleh 
 // Output: nahk dihlK
