@@ -3,7 +3,7 @@
 using namespace std;
  void printSubsets(vector<int> &arr,vector<int> &ans,int i){
     if(i == arr.size()){
-      for(int val: arr){
+      for(int val: ans){
         cout<<val<<" ";
     }
     cout<<endl;
