@@ -15,7 +15,7 @@ public:
     {
       swap(nums[idx], nums[i]);
       getperms(nums, idx + 1, ans);
-      swap(nums[idx], nums[i]); // wapas undo karo
+      swap(nums[idx], nums[i]); 
     }
   }
   vector<vector<int>> permute(vector<int> &nums)
