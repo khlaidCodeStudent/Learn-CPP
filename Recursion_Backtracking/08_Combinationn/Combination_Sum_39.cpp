@@ -66,6 +66,9 @@ int main()
 // Answer: 
 // [ 2 2 3 ]
 // [ 7 ]
+
 // Time Complexity: O(2^n) where n is the number of elements in the input vector arr. The recursive function explores all possible combinations of elements, leading to an exponential number of combinations in the worst case.
+
 // Space Complexity: O(n) for the recursion stack, where n is the number of elements in the input vector arr. The space used by the answer vector and the set is not counted towards the space complexity since they are part of the output.
+
 // How Code Works: The code uses a recursive backtracking approach to generate all unique combinations of elements from the input vector arr that sum up to the target value. The getAllCombinations function takes the current index idx, the remaining target tar, and a temporary combination vector combin. It explores three possibilities: including the current element (single choose), including it multiple times (multiple), and excluding it (exclusion). When the remaining target becomes zero, it checks if the combination is unique using a set and adds it to the answer vector ans. The main function demonstrates how to use the Solution class to find and print all unique combinations that sum up to the target value.
