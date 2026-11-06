@@ -2,14 +2,11 @@
 #include <vector>
 #include <string>
 using namespace std;
-
 class Solution
 {
 public:
   vector<vector<string>> ans;
   vector<string> current;
-
-  // Check karo ke string palindrome hai ya nahi
   bool isPalindrome(string &s, int start, int end)
   {
     while (start < end)
@@ -30,8 +27,7 @@ public:
       ans.push_back(current);
       return;
     }
-
-   
+    
     for (int i = index; i < s.size(); i++)
     {
      
