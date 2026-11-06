@@ -24,24 +24,24 @@ public:
 
   void backtrack(string &s, int index)
   {
-    // Base case: agar poori string khatam ho gayi
+    
     if (index == s.size())
     {
       ans.push_back(current);
       return;
     }
 
-    // Har possible cut try karo
+   
     for (int i = index; i < s.size(); i++)
     {
-      // Agar index se i tak ka part palindrome hai
+     
       if (isPalindrome(s, index, i))
       {
-        // Us part ko le lo
+     
         current.push_back(s.substr(index, i - index + 1));
-        // Agay ke liye recursion
+       
         backtrack(s, i + 1);
-        // Wapis a kar hatado (Backtracking)
+       
         current.pop_back();
       }
     }
@@ -59,7 +59,6 @@ int main()
   Solution sol;
   string s = "aab";
   
-
   vector<vector<string>> result = sol.partition(s);
 
   for (auto &v : result)
