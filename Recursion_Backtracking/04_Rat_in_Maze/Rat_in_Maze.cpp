@@ -47,9 +47,3 @@ int main()
 // Output:
 // DDRDRR
 // DRDDRR
-
-// Time Complexity: O(4^(n^2)), where n is the size of the matrix. In the worst case, we can explore all possible paths in the matrix, and for each cell, we have 4 possible directions to move (up, down, left, right).
-
-// Space Complexity: O(n^2), where n is the size of the matrix. We use a visited matrix of size n x n to keep track of the visited cells, and the recursion stack can go up to n^2 in the worst case.
-
-// However, the actual time complexity may be lower in practice due to the constraints of the maze (e.g., blocked cells) and the pruning of paths that lead to dead ends.
