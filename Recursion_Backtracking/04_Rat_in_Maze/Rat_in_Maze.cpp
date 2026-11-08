@@ -2,10 +2,10 @@
 #include <vector>
 using namespace std;
 
-void helper(vector<vector<int>> &mat, int r, int c, string path, vector<string> &ans, vector<vector<bool>> &vis)
+void helper(vector<vector<int>> &mat, int r, int c, string path, vector<string> &ans)
 {
   int n = mat.size();
-  if (r < 0 || c < 0 || r >= n || c >= n || mat[r][c] == 0 || vis[r][c] == true)
+  if (r < 0 || c < 0 || r >= n || c >= n || mat[r][c] == 0  || mat[r][c] == -1)
   {
     return;
   }
@@ -14,12 +14,12 @@ void helper(vector<vector<int>> &mat, int r, int c, string path, vector<string> 
     ans.push_back(path);
     return;
   }
-  vis[r][c] = true;
-  helper(mat, r + 1, c, path + "D", ans, vis); // down
-  helper(mat, r, c - 1, path + "L", ans, vis); // left
-  helper(mat, r, c + 1, path + "R", ans, vis); // right
-  helper(mat, r - 1, c, path + "U", ans, vis); // up
-  vis[r][c] = false;
+  mat[r][c] = -1; // mark as visited
+  helper(mat, r + 1, c, path + "D", ans); // down
+  helper(mat, r, c - 1, path + "L", ans); // left
+  helper(mat, r, c + 1, path + "R", ans); // right
+  helper(mat, r - 1, c, path + "U", ans); // up
+  mat[r][c] = 1; // mark as unvisited (backtrack)
 }
 
 vector<string> findPath(vector<vector<int>> &mat)
