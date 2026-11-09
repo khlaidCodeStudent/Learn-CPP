@@ -68,6 +68,7 @@ int main()
 {
   Solution s;
   int n;
+  cout << "Enter n: ";
   cin >> n;
   vector<vector<string>> res = s.solveNQueens(n);
   for (auto &sol : res)
