@@ -79,3 +79,21 @@ int main()
   }
   return 0;
 }
+// Output: 
+// Enter n: 4
+// ..Q.
+// Q...
+// ...Q
+// .Q..
+// .Q..
+// ...Q
+// Q...
+// ..Q.
+
+// Time Complexity: O(N! * N) where N is the size of the chessboard. The N! factor comes from the fact that we are trying to place queens in N rows, and for each row, we have N choices for placing a queen. The additional O(N) factor comes from the isSafe function, which checks if a queen can be placed in a particular position.
+
+// Space Complexity: O(N^2) for the board and O(N) for the recursion stack, resulting in a total space complexity of O(N^2 + N) = O(N^2).
+
+// Note: The above time and space complexity analysis is a rough estimate and may vary based on the specific implementation and optimizations used. 
+
+// How code works: The code uses backtracking to solve the N-Queens problem. It starts with an empty chessboard and tries to place queens row by row. For each row, it checks all columns to see if placing a queen is safe (i.e., it does not conflict with any previously placed queens). If it finds a safe position, it places the queen and recursively attempts to place queens in the next row. If it reaches a point where no safe position is available, it backtracks by removing the last placed queen and trying the next column. This process continues until all queens are placed on the board, at which point the current configuration is added to the list of solutions.
